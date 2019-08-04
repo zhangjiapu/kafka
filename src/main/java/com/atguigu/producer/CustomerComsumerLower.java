@@ -1,7 +1,7 @@
 package com.atguigu.producer;
 
 /**
- * @ClassName CustomerProducerLower
+ * @ClassName CustomerComsumerLower
  * @Description TODO
  * @Author 张家谱
  * @Date 2019/8/4 12:41
@@ -29,7 +29,7 @@ import java.util.List;
  * 5. 获取分区和副本信息
  *
  */
-public class CustomerProducerLower {
+public class CustomerComsumerLower {
 
     public static void main(String[] args) {
 
@@ -53,7 +53,7 @@ public class CustomerProducerLower {
         long offset = 2l;
 
         // 找到leader
-        CustomerProducerLower customerProducerLower = new CustomerProducerLower();
+        CustomerComsumerLower customerProducerLower = new CustomerComsumerLower();
         BrokerEndPoint leader = customerProducerLower.findLeader(brokers,port,topic,partition);
 
         // 从leader获取数据
